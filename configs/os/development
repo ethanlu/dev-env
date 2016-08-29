@@ -1,0 +1,8 @@
+####################################################################################
+####################################################################################
+# modules usually needed for development environments
+yum -y groupinstall 'Development Tools'
+yum -y install bzip2-devel
+yum -y install libffi-devel
+yum -y install openssl-devel
+yum -y install zlib-devel

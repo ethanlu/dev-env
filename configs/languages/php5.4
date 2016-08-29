@@ -1,0 +1,21 @@
+####################################################################################
+####################################################################################
+# install php 5.4
+yum -y install php
+yum -y install php-devel
+yum -y install php-mbstring
+yum -y install php-mysql
+yum -y install php-pear
+yum -y install php-pgsql
+yum -y install php-xml
+
+
+####################################################################################
+####################################################################################
+# install composer and make it globally acccessible
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+####################################################################################
+####################################################################################
+# other PHP modules from other package formats?

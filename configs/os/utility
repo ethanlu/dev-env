@@ -1,0 +1,17 @@
+####################################################################################
+####################################################################################
+# handy tools
+yum -y install ftp
+yum -y install wget
+yum -y install mlocate
+
+
+####################################################################################
+####################################################################################
+# 256 colors
+yum -y install ncurses-devel
+if [ ! -e /etc/profile.d/xterm256.sh ]
+then
+	touch /etc/profile.d/xterm256.sh
+	echo "export TERM=xterm-256color" >> /etc/profile.d/xterm256.sh
+fi
