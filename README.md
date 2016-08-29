@@ -14,13 +14,13 @@ You will need the following things installed and configured in your environment:
 ### Setup
 1. Clone this repository
     * `git clone [url of this repo]`
-2a. Create environment variable called `VAGRANT_HOST_SYNC_FOLDER` and set it to desired folder on host machine that will be synced on the guest machine. Recommended is to set it to the parent folder of where you store all of your projects.
-2b. Optionally, create environment variable called `VAGRANT_GUEST_IP_ADDRESS` and set it to a desired ip for the guest vm.
-3. Start up the vm via vagrant
+2. Create environment variable called `VAGRANT_HOST_SYNC_FOLDER` and set it to desired folder on host machine that will be synced on the guest machine. Recommended is to set it to the parent folder of where you store all of your projects.
+3. Optionally, create environment variable called `VAGRANT_GUEST_IP_ADDRESS` and set it to a desired ip for the guest vm.
+4. Start up the vm via vagrant
     * `cd [this repository]`
     * `vagrant up`
-4. Once complete, you can ssh into the guest vm on 127.0.0.1:2222 with vagrant/vagrant as the user/password.
-5. Configure the vm environment according to your needs, but only modify this repository if it can be a application-agnostic configuration
+5. Once complete, you can ssh into the guest vm on 127.0.0.1:2222 with vagrant/vagrant as the user/password.
+6. Configure the vm environment according to your needs, but only modify this repository if it can be a application-agnostic configuration
 
 - - - -
 
