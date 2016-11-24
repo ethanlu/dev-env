@@ -53,9 +53,9 @@ Vagrant.configure("2") do |config|
   
   #############################################################################################
   #############################################################################################
-  # ssh 
+  # ssh
   config.ssh.username = "vagrant"
-  config.ssh.password = "vagrant"
+  #config.ssh.password = "vagrant"
 
   #############################################################################################
   #############################################################################################
@@ -103,6 +103,10 @@ Vagrant.configure("2") do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
+  # 
+  # NOTE: make sure you have vbox guest additionals installed and updated:
+  #       http://kvz.io/blog/2013/01/16/vagrant-tip-keep-virtualbox-guest-additions-in-sync/
+  #
   config.vm.synced_folder ENV['VAGRANT_HOST_SYNC_FOLDER'], "/home/vagrant/sync", type: "virtualbox"
 
   #############################################################################################
