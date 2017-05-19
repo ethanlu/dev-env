@@ -30,8 +30,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "centos/7"
-  config.vm.box_version = "1610.01"
+  config.vm.box = "geerlingguy/centos7"
   config.vm.hostname = "local-vm"
 
   # Disable automatic box update checking. If you disable this, then
@@ -128,6 +127,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "configs/datastores/rabbitmq"
   config.vm.provision "shell", path: "configs/datastores/redis"
 
-  config.vm.provision "shell", path: "configs/languages/python3.4"
-  #config.vm.provision "shell", path: "configs/languages/php5.4"
+  config.vm.provision "shell", path: "configs/languages/python36"
+  #config.vm.provision "shell", path: "configs/languages/php54"
 end

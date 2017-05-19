@@ -1,0 +1,22 @@
+# install python 3.4.x
+yum -y install python34
+yum -y install python34-devel
+
+# install pip
+curl -O https://bootstrap.pypa.io/get-pip.py
+/usr/bin/python3.4 get-pip.py
+rm -f get-pip.py
+
+# install virtualenvwrapper to make managing virtual environments easier
+pip install virtualenvwrapper
+
+# create setup script for all logins if it does not exist
+if [ ! -e /etc/profile.d/virtualenvwrapper_setup.sh ]
+then
+	touch /etc/profile.d/virtualenvwrapper_setup.sh
+	cat <<EOT >> /etc/profile.d/virtualenvwrapper_setup.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
+export WORKON_HOME=~/.virtualenvs
+source /usr/bin/virtualenvwrapper.sh
+EOT
+fi

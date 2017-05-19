@@ -1,11 +1,12 @@
-# install python 3.x
-yum -y install python34
-yum -y install python34-devel
+# install python 3.6.x
+yum -y install python36u python36u-libs python36u-devel python36u-pip
 
 # install pip
 curl -O https://bootstrap.pypa.io/get-pip.py
-/usr/bin/python3.4 get-pip.py
+/usr/bin/python3.6 get-pip.py
 rm -f get-pip.py
+
+ln -s /bin/pip3.6 /bin/pip
 
 # install virtualenvwrapper to make managing virtual environments easier
 pip install virtualenvwrapper
@@ -15,7 +16,7 @@ if [ ! -e /etc/profile.d/virtualenvwrapper_setup.sh ]
 then
 	touch /etc/profile.d/virtualenvwrapper_setup.sh
 	cat <<EOT >> /etc/profile.d/virtualenvwrapper_setup.sh
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.4
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3.6
 export WORKON_HOME=~/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh
 EOT
