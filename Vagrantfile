@@ -114,7 +114,7 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
                           group: "vagrant",
                           mount_options: ["dmode=775,fmode=664"]
 
-  # sync folder for salt
+  # sync folder for saltstack states
   config.vm.synced_folder "salt/states", "/srv/salt",
                           type: "virtualbox",
                           owner: "vagrant",
