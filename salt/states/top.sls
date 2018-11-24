@@ -5,3 +5,6 @@ dev:
         - os.utility
         - language.python36
         - language.php72
+        - datastore.redis
+        - datastore.mariadb10
+        - webserver.nginx

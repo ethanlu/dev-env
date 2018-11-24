@@ -21,3 +21,7 @@ ncurses-devel:
 zlib-devel:
     pkg:
         - installed
+
+MySQL-python:
+    pkg:
+        - installed
