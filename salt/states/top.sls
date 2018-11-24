@@ -7,4 +7,5 @@ dev:
         - language.php72
         - datastore.redis
         - datastore.mariadb10
+        - datastore.postgres11
         - webserver.nginx

@@ -1,9 +1,25 @@
+# install repo
+mariadb10-repo:
+    pkgrepo.managed:
+        - name: mariadb-repo
+        - enabled: True
+        - baseurl: http://yum.mariadb.org/10.2/centos7-amd64
+        - gpgkey: https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+        - gpgcheck: True
+
+# install package
 mariadb10:
     pkg.installed:
         - names:
             - MariaDB-server
             - MariaDB-client
 
+# salt dependency
+MySQL-python:
+    pkg:
+        - installed
+
+# setup service
 mariadb10-service:
     service.running:
         - name: mysqld
