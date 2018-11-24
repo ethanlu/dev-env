@@ -18,7 +18,7 @@ python36:
 pip:
     cmd.run:
         - name: curl https://bootstrap.pypa.io/get-pip.py | /usr/bin/python3.6
-        - unless: /usr/local/bin/pip
+        - unless: /usr/local/bin/pip -V
 
 # make sure pip is always latest
 pip_latest:
@@ -33,7 +33,7 @@ pip_latest:
 virtualenvwrapper:
     cmd.run:
         - name: /usr/local/bin/pip install virtualenvwrapper
-        - unless: /usr/local/bin/lsvirtualenv
+        - unless: /usr/local/bin/virtualenvwrapper.sh
 
 # make sure the commands are available to users when they login
 virtualenvwrapper_commands:
