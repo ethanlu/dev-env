@@ -53,8 +53,15 @@ rabbitmq37-user:
                 - '.*'
 
 # env file
-rabbitmq_config:
+rabbitmq_env_config:
     file.managed:
         - name: /etc/rabbitmq/rabbitmq-env.conf
+        - source:
+            - /srv/salt/templates/rabbitmq-env.conf
+
+            # env file
+rabbitmq_config:
+    file.managed:
+        - name: /etc/rabbitmq/rabbitmq.conf
         - source:
             - /srv/salt/templates/rabbitmq-env.conf
