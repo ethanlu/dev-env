@@ -1,7 +1,7 @@
 Vagrantfile for development environments
 ================================
 
-Vagrant file for development environment running on Centos7. 
+Vagrant file for creating development environment that runs on a Centos environment. Uses SaltStack in a masterless setup to handle all of the VM provisioning.
 
 - - - -
  
@@ -10,6 +10,7 @@ You will need the following things installed and configured in your environment:
 
 * [Git](http://git-scm.com/)
 * [Vagrant](https://www.vagrantup.com/)
+* [VirtualBox](https://www.virtualbox.org/)
 
 ### Setup
 1. Clone this repository
@@ -19,7 +20,7 @@ You will need the following things installed and configured in your environment:
 4. Start up the vm via vagrant
     * `cd [this repository]`
     * `vagrant up`
-5. Once complete, you can ssh into the guest vm on 127.0.0.1:2222 with vagrant/vagrant as the user/password.
+5. Once complete, you can ssh into the guest vm via `vagrant ssh`
 6. Configure the vm environment according to your needs, but only modify this repository if it can be a application-agnostic configuration
 
 - - - -
@@ -33,9 +34,10 @@ Following is a list of environment variables that will affect the vagrant setup:
 
 ## TODO
 
-* potentially upgrade to using Chef/Ansible for provisioning
+* add Chef/Ansible variation support for the lulz
 
 - - - -
 
 ## Resources:
 * [Vagrant Docs](https://www.vagrantup.com/docs/)
+* [SaltStack](https://docs.saltstack.com/en/latest/)
