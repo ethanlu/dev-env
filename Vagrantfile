@@ -131,22 +131,4 @@ Vagrant.configure(VAGRANT_API_VERSION) do |config|
     salt.minion_config = "salt/minion"
     salt.run_highstate = true
   end
-
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
-  #config.vm.provision "shell", path: "configs/os/essentials"
-  #config.vm.provision "shell", path: "configs/os/development"
-  #config.vm.provision "shell", path: "configs/os/utility"
-
-  #config.vm.provision "shell", path: "configs/webservers/apache"
-  #config.vm.provision "shell", path: "configs/webservers/nginx"
-
-  #config.vm.provision "shell", path: "configs/datastores/mysql"
-  #config.vm.provision "shell", path: "configs/datastores/postgres"
-  #config.vm.provision "shell", path: "configs/datastores/rabbitmq"
-  #config.vm.provision "shell", path: "configs/datastores/redis"
-
-  #config.vm.provision "shell", path: "configs/languages/python36"
-  #config.vm.provision "shell", path: "configs/languages/php54"
 end
