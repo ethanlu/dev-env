@@ -34,6 +34,11 @@ rabbitmq37:
             - erlang
             - rabbitmq-server
 
+# setup plugins
+rabbitmq37-plugin:
+    rabbitmq_plugin.enabled:
+        - name: rabbitmq_management
+
 # setup service
 rabbitmq37-service:
     service.running:
@@ -59,9 +64,9 @@ rabbitmq_env_config:
         - source:
             - /srv/salt/templates/rabbitmq-env.conf
 
-            # env file
+# env file
 rabbitmq_config:
     file.managed:
-        - name: /etc/rabbitmq/rabbitmq.conf
+        - name: /etc/rabbitmq/rabbitmq.config
         - source:
-            - /srv/salt/templates/rabbitmq-env.conf
+            - /srv/salt/templates/rabbitmq.config

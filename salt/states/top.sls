@@ -8,5 +8,5 @@ dev:
         - datastore.redis
         - datastore.mariadb10
         - datastore.postgres11
-        - datastore.rabbitmq37
+        #- datastore.rabbitmq37
         - webserver.nginx
